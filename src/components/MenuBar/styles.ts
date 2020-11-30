@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components';
+
 import {
   Home,
   Notifications,
@@ -8,8 +9,10 @@ import {
   ExitToApp,
   Rocketseat,
 } from '../../styles/Icons';
+
 export const Container = styled.div`
   display: none;
+
   @media (min-width: 500px) {
     display: flex;
     flex-direction: column;
@@ -25,14 +28,17 @@ export const Container = styled.div`
     overflow-y: auto;
   }
 `;
-export const TopSide = styled.div`
+
+export const Topside = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+
   @media (min-width: 1280px) {
     align-items: flex-start;
   }
 `;
+
 export const Logo = styled(Rocketseat)`
   width: 41px;
   height: 41px;
@@ -43,16 +49,16 @@ export const Logo = styled(Rocketseat)`
 
   margin-bottom: 20px;
 `;
+
 export const MenuButton = styled.button`
   display: flex;
   align-items: center;
   flex-shrink: 0;
 
-  padding: 8.25px 0;
-  outline: 0;
   > span {
     display: none;
   }
+
   @media (min-width: 1280px) {
     > span {
       display: inline;
@@ -61,23 +67,27 @@ export const MenuButton = styled.button`
       font-weight: bold;
       font-size: 19px;
     }
+
     padding-right: 15px;
   }
 
-  /* todos botões menos o primeiro */
+  padding: 8.25px 0;
+  outline: 0;
+
   & + button {
     margin-top: 16.5px;
   }
 
-  /* último botão */
-  /* botão de tweetar */
   & + button:last-child {
     margin-top: 33px;
+
     width: 40px;
     height: 40px;
+
     > span {
       display: none;
     }
+
     @media (min-width: 1280px) {
       width: 100%;
       height: unset;
@@ -94,6 +104,7 @@ export const MenuButton = styled.button`
   &:hover {
     background: var(--twitter-dark-hover);
   }
+
   &:hover,
   &.active {
     span,
@@ -106,6 +117,7 @@ export const MenuButton = styled.button`
 
 const iconCSS = css`
   flex-shrink: 0;
+
   width: 30px;
   height: 30px;
   color: var(--white);
@@ -127,8 +139,9 @@ export const ProfileIcon = styled(Person)`
   ${iconCSS}
 `;
 
-export const BotSide = styled.div`
+export const Botside = styled.div`
   margin-top: 20px;
+
   display: flex;
   align-items: center;
 `;
@@ -138,8 +151,8 @@ export const Avatar = styled.div`
   height: 39px;
 
   flex-shrink: 0;
-  border-radius: 50%;
 
+  border-radius: 50%;
   background: var(--gray);
 `;
 
@@ -149,8 +162,10 @@ export const ProfileData = styled.div`
   @media (min-width: 1280px) {
     display: flex;
     flex-direction: column;
+
     margin-left: 10px;
     font-size: 14px;
+
     > span {
       color: var(--gray);
     }
@@ -159,15 +174,15 @@ export const ProfileData = styled.div`
 
 export const ExitIcon = styled(ExitToApp)`
   display: none;
+
   @media (min-width: 1280px) {
     display: inline-block;
     width: 25px;
     height: 25px;
-
     color: var(--white);
     margin-left: 30px;
-
     cursor: pointer;
+
     &:hover {
       > path {
         color: var(--like);

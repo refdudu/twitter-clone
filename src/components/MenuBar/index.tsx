@@ -3,7 +3,7 @@ import Button from '../Button';
 
 import {
   Container,
-  TopSide,
+  Topside,
   Logo,
   MenuButton,
   HomeIcon,
@@ -11,7 +11,7 @@ import {
   EmailIcon,
   FavoriteIcon,
   ProfileIcon,
-  BotSide,
+  Botside,
   Avatar,
   ProfileData,
   ExitIcon,
@@ -20,7 +20,7 @@ import {
 const MenuBar: React.FC = () => {
   return (
     <Container>
-      <TopSide>
+      <Topside>
         <Logo />
         <MenuButton>
           <HomeIcon />
@@ -45,15 +45,15 @@ const MenuBar: React.FC = () => {
         <Button>
           <span>Tweetar</span>
         </Button>
-      </TopSide>
-      <BotSide>
+      </Topside>
+      <Botside>
         <Avatar />
         <ProfileData>
           <strong>renan</strong>
           <span>@renan_fischer_ </span>
         </ProfileData>
-          <ExitIcon /> 
-      </BotSide>
+        <ExitIcon />
+      </Botside>
     </Container>
   );
 };
